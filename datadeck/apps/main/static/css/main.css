@@ -1,0 +1,66 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	padding-top: 70px;
+	background-color: #ffffff;
+	font-size: 16px;
+}
+
+.navbar-color{
+	background-color: #FEFEFE;
+}
+
+.logo-datadeck{
+	margin-top: -2em;
+	max-width: 10em;
+}
+
+.navbar-default .navbar-nav>li>a{
+	border-bottom: solid transparent;
+	padding-bottom: 9px;
+    margin-top: 3px;
+    margin-bottom: -5px;
+}
+.navbar-default .navbar-nav>li>a:hover{
+	border-bottom: solid;
+	border-bottom-color: #921433;
+	/*background-color: #2D4967;*/
+}
+
+/*.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+	background-color: #2D4967;
+	border-bottom: solid;
+}
+.navbar-default .navbar-nav>li> .active{
+	background-color: #2D4967;
+}
+.navbar-default .navbar-nav>li> .active:hover{
+	background-color: #2D4967;
+}
+*/
+/*.navbar-brand{
+	color: white !important;
+    max-width: 50%;
+}
+
+.navbar-default .navbar-nav>li>a{
+	color: white !important;
+	border-bottom: solid transparent;
+}
+.navbar-default .navbar-nav>li>a:hover{
+	border-bottom: solid;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+	background-color: #2D4967;
+	border-bottom: solid;
+}
+.navbar-default .navbar-nav>li> .active{
+	background-color: #2D4967;
+}
+.navbar-default .navbar-nav>li> .active:hover{
+	background-color: #2D4967;
+}
+
+.panel-perfil {
+    border-color: #375A7F;
+}*/

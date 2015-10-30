@@ -1,0 +1,81 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../favicon.ico">
+    <title>{% block title %}DataDeck{% endblock title %}</title>
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/main.css" %}" rel="stylesheet">
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="navbar navbar-default navbar-color navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand">
+                    <!-- Logo DataDeck -->
+                    <img class="img-responsive logo-datadeck" src="{% static "img/logo.svg" %}">
+                </a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <!--<li>
+                        <a href="#" class="active">
+                            <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+                            Dashboard
+                        </a>
+                    </li>-->
+                    <li>
+                        <a href="" >
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            Registros
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                            Ventas
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Simplex <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="download">
+                            <li><a href="http://jsfiddle.net/bootswatch/3he50zsf/">Open Sandbox</a></li>
+                            <li class="divider"></li>
+                            <li><a href="./bootstrap.min.css">bootstrap.min.css</a></li>
+                            <li><a href="./bootstrap.css">bootstrap.css</a></li>
+                            <li class="divider"></li>
+                            <li><a href="./variables.less">variables.less</a></li>
+                            <li><a href="./bootswatch.less">bootswatch.less</a></li>
+                            <li class="divider"></li>
+                            <li><a href="./_variables.scss">_variables.scss</a></li>
+                            <li><a href="./_bootswatch.scss">_bootswatch.scss</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{% url 'users:login' %}">Login</a></li>
+                    <li><a href="{% url 'users:register' %}">Registrarse</a></li>
+                    <!-- <li><a href="">Registrarse / Login</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        {% block body %}
+        {% endblock body %}
+    </div>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/main.js" %}"></script>
+</body>
+</html>

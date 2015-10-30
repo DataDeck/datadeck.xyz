@@ -30,16 +30,28 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = (
+DJANGO_APPS = (
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.home',
+)
+
+LOCAL_APPS = (
+    'apps.users',
+    'apps.main',
+    'apps.inventario',
     'apps.products',
 )
+
+THIRD_PARTY_APPS = (
+    'sorl.thumbnail',
+)
+
+INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -102,3 +114,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+#MEDIA
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.sep.join(os.path.abspath(__file__).split(os.sep)[:-2] + ['media'])
+
+
+
+# GRAPPELLI
+GRAPPELLI_ADMIN_TITLE = 'DataDeck'
