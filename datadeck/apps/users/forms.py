@@ -8,22 +8,16 @@ class UserLoginForm(forms.Form):
 	username = forms.CharField(max_length=30,
 							widget= forms.TextInput(attrs={
 								'class' : 'form-control',
-								'placeholder' : 'Ingrese tu Usuario',
+								'placeholder' : 'Ingresa tu Usuario',
 								'required' : 'True'
 							}))
 
 	password = forms.CharField(max_length=30,
 							widget = forms.PasswordInput(attrs={
 								'class' : 'form-control',
-								'placeholder' : 'Ingrese tu Contraseña',
+								'placeholder' : 'Ingresa tu Contraseña',
 								'required' : 'True'
 							}))
-
-	# def clean(self):
-	# 	# print self.cleaned_data
-	# 	user_exist = User.objects.filter(username = self.cleaned_data['username'])
-	# 	if not user_exist:
-	# 		self.add_error('username', 'El nombre de usuario no existe')
 
 	def clean(self):
 		if self.cleaned_data.get('username') and self.cleaned_data.get('password'):
@@ -43,7 +37,7 @@ class UserRegisterForm(forms.ModelForm):
 		model = User
 		fields = ('username', 'email', 'password')
 		widgets = {
-			'username' : forms.TextInput(attrs={'class' : 'form-control', 'placeholder' : 'Ingresar tu nombre de Usuario'}),
-			'email' : forms.EmailInput(attrs={'class' : 'form-control', 'placeholder' : 'Ingresa tu Email'}),
-			'password' : forms.PasswordInput(attrs={'class' : 'form-control', 'placeholder' : 'Ingresa tu Contraseña'}),
+			'username' : forms.TextInput(attrs={'class' : 'form-control', 'placeholder' : 'Ingresa un nombre de Usuario'}),
+			'email' : forms.EmailInput(attrs={'class' : 'form-control', 'placeholder' : 'Ingresa tu Emai'}),
+			'password' : forms.PasswordInput(attrs={'class' : 'form-control', 'placeholder' : 'Ingresa una Contraseña'}),
 		}

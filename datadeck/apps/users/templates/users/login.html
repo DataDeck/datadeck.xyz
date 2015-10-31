@@ -17,7 +17,7 @@
                     {% endif %}
                     <div class="form-group">
                         {{ form.username }}
-                        {{ form.username.errors }}
+                        <span style='color:red;'>{{ form.username.errors }}</span>
                     </div>
                     <div class="form-group">
                         {{ form.password }}
